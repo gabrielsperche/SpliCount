@@ -1,7 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.splitec.splicount.SplicountApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.237 s <<< FAILURE! - in com.splitec.splicount.SplicountApplicationTests
-com.splitec.splicount.SplicountApplicationTests  Time elapsed: 0.235 s  <<< ERROR!
-java.lang.IllegalStateException: Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test
-
