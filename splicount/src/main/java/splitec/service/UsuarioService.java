@@ -6,22 +6,32 @@ import splitec.entities.Usuario;
 import splitec.repository.UsuarioRepository;
 import splitec.repository.dbconnection.DatabaseConnection;
 
+import java.util.List;
+
 public class UsuarioService {
 
-    private UsuarioRepository repository;
+    private final UsuarioRepository _repository;
 
     public UsuarioService() {
-        repository = new UsuarioRepository();
+        _repository = new UsuarioRepository();
     }
 
-    public void verifyUser(Usuario user) {
+    public UsuarioService(UsuarioRepository repository) {
+        _repository = repository;
     }
 
-    public Usuario getById(ObjectId id) {
-        return null;
+    public void verificaUsuario(Usuario user) {
     }
 
-    public void createUser(Usuario usuario) {
-        repository.create(usuario);
+    public Usuario encontraPorId(ObjectId id) {
+        return _repository.findById(id);
+    }
+
+    public void criarUsuario(Usuario usuario) {
+        _repository.saveOrUpdate(usuario);
+    }
+
+    public List<Usuario> listaTodos() {
+        return _repository.findAll();
     }
 }
