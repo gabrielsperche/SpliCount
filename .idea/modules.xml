@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SpliCount.iml" filepath="$PROJECT_DIR$/.idea/SpliCount.iml" />
-      <module fileurl="file://$PROJECT_DIR$/splicount/splicount/splitec.iml" filepath="$PROJECT_DIR$/splicount/splicount/splitec.iml" />
+      <module fileurl="file://$PROJECT_DIR$/splicount-app-view/splicount-app-view.iml" filepath="$PROJECT_DIR$/splicount-app-view/splicount-app-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/splicount/splitec.iml" filepath="$PROJECT_DIR$/splicount/splitec.iml" />
     </modules>
   </component>
 </project>
