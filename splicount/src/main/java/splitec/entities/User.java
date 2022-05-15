@@ -11,13 +11,13 @@ public class User {
     private String name;
     private String password;
 
-    User(String name, String password, ObjectId id) {
+    public User(String name, String password, ObjectId id) {
         this.name = name;
         this.password = password;
         this.id = id;
     }
 
-    User() {
+    public User() {
     }
 
     public String getName() {
