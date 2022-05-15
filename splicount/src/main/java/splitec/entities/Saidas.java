@@ -3,7 +3,7 @@ package splitec.entities;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Saidas extends ValoresBase {
+public class Saidas {
 
     private final List<Custo> custos = new ArrayList<>();
 

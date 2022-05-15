@@ -5,18 +5,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import splitec.entities.Departamento;
-import splitec.entities.User;
-import splitec.service.GerirDepartamentoService;
-import splitec.service.Service;
+import splitec.service.DepartamentoService;
 
 @RestController
 @RequestMapping("/departamento")
-public class DepartamentoController extends Service {
+public class DepartamentoController {
 
    @PostMapping("/create")
     public String createDepartment(@RequestBody Departamento departamentoModel) {
         try {
-            GerirDepartamentoService service = new GerirDepartamentoService();
+            DepartamentoService service = new DepartamentoService();
 
             if (service.validarModel(departamentoModel))
                 return "erro";

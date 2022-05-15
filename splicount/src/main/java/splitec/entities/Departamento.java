@@ -18,10 +18,10 @@ public class Departamento implements IValorBase {
 
     @Override
     public void calculaValorTotal() {
-        double valorEntradas = entradas.getValorTotal();
-        double valorSaidas = saidas.getValorTotal();
+        // valorEntradas = entradas.getValorTotal();
+        //double valorSaidas = saidas.getValorTotal();
 
-        valorTotal = valorEntradas - valorSaidas;
+        //valorTotal = valorEntradas - valorSaidas;
     }
 
     public ObjectId get_id() {
