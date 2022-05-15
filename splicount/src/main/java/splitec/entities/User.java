@@ -2,6 +2,10 @@ package splitec.entities;
 
 import org.bson.types.ObjectId;
 
+/**
+ * @author gabrielsperche
+ */
+
 public class User {
     private ObjectId id;
     private String name;

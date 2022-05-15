@@ -4,6 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import splitec.controller.Controller;
 
+/**
+ * @author gabrielsperche
+ */
+
 @SpringBootApplication
 public class Application extends Controller {
 
