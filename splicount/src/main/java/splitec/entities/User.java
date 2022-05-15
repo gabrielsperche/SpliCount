@@ -1,26 +1,30 @@
 package splitec.entities;
 
+import org.bson.types.ObjectId;
+
 public class User {
-    private String id;
+    private ObjectId id;
     private String name;
     private String password;
 
-    User(String name, String password){
+    User(String name, String password, ObjectId id) {
         this.name = name;
         this.password = password;
+        this.id = id;
     }
 
-    User(){}
+    User() {
+    }
 
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 
-    public String getPassword(){
+    public String getPassword() {
         return this.password;
     }
 
-    public String getId(){
+    public ObjectId getId() {
         return this.id;
     }
 }
