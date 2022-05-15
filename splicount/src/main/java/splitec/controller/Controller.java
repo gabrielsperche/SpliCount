@@ -7,18 +7,13 @@ import splitec.service.Service;
 @RestController
 @RequestMapping("/api")
 public class Controller extends Service {
-    @GetMapping("/user/{id}")
-    String getUserNameById(@PathVariable String id) {
-        return getUserName(id);
-    }
 
     @PostMapping("/auth")
-    public String teste(@RequestBody User user){
-        return "ok";
-    }
-
-    @GetMapping("/teste")
-    String teste(){
-        return "Murilo";
+    public String login(@RequestBody User user) throws Exception {
+        try {
+            return auth(user);
+        } catch (Exception e){
+            return e.getLocalizedMessage();
+        }
     }
 }
