@@ -8,11 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="splitec" />
-        <module name="splicount-app-view" />
+        <module name="splicountviewapp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="SpliCount" target="17" />
       <module name="splicount-app-view" target="17" />
+      <module name="splicountviewapp" target="17" />
       <module name="splitec" target="17" />
     </bytecodeTargetLevel>
   </component>

@@ -1,3 +1,5 @@
+splitec\application\Application.class
+splitec\controller\Controller.class
 splitec\service\Service.class
 splitec\entities\User.class
 splitec\repository\Repository.class

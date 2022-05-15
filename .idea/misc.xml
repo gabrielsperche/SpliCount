@@ -5,7 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/splicount/splicount/pom.xml" />
         <option value="$PROJECT_DIR$/splicount/pom.xml" />
-        <option value="$PROJECT_DIR$/splicount-app-view/pom.xml" />
+        <option value="$PROJECT_DIR$/splicountviewapp/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
