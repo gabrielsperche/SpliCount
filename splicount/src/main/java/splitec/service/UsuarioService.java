@@ -27,11 +27,15 @@ public class UsuarioService {
         return _repository.findById(id);
     }
 
-    public void criarUsuario(Usuario usuario) {
+    public void criarOuAtualizarUsuario(Usuario usuario) {
         _repository.saveOrUpdate(usuario);
     }
 
     public List<Usuario> listaTodos() {
         return _repository.findAll();
+    }
+
+    public void deletar(ObjectId id) {
+        _repository.deleteById(id);
     }
 }

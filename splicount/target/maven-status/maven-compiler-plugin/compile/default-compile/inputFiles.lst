@@ -11,7 +11,6 @@ C:\repositories\Java\SpliCount\splicount\src\main\java\splitec\repository\Usuari
 C:\repositories\Java\SpliCount\splicount\src\main\java\splitec\service\UsuarioService.java
 C:\repositories\Java\SpliCount\splicount\src\main\java\splitec\service\DepartamentoService.java
 C:\repositories\Java\SpliCount\splicount\src\main\java\splitec\entities\enums\TipoCusto.java
-C:\repositories\Java\SpliCount\splicount\src\main\java\splitec\repository\interfaces\IUsuarioRepository.java
 C:\repositories\Java\SpliCount\splicount\src\main\java\splitec\controller\UsuarioController.java
 C:\repositories\Java\SpliCount\splicount\src\main\java\splitec\entities\Custo.java
 C:\repositories\Java\SpliCount\splicount\src\main\java\splitec\entities\Lucro.java

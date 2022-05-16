@@ -26,29 +26,29 @@ public class UsuarioController {
         }
     }
 
-    @PostMapping("/create")
-    public String criarUsuario(@RequestBody Usuario usuario) {
+    @PostMapping("/upsert")
+    public String criarOuAtualizarUsuario(@RequestBody Usuario usuario) {
         UsuarioService service = new UsuarioService();
-        service.criarUsuario(usuario);
+        service.criarOuAtualizarUsuario(usuario);
         return "Sucess";
     }
 
     @GetMapping("/find/{id}")
     public Usuario encontrarUsuarioPorId(@PathVariable ObjectId id) {
         UsuarioService service = new UsuarioService();
-        Usuario u = service.encontraPorId(id);
-        return u;
+        return service.encontraPorId(id);
     }
 
     @GetMapping("/findall")
     public List<Usuario> listarTodosUsuarios() {
         UsuarioService service = new UsuarioService();
-        List<Usuario> usuarioList = service.listaTodos();
-        return usuarioList;
+        return service.listaTodos();
     }
 
-    @GetMapping("/test")
-    public String test() {
-        return "test";
+    @DeleteMapping("/delete/{id}")
+    public String deleteUsuario(@PathVariable ObjectId id) {
+        UsuarioService service = new UsuarioService();
+        service.deletar(id);
+        return "Sucesso";
     }
 }
