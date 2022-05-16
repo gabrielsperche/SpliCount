@@ -27,7 +27,7 @@ public class UsuarioService {
         return _repository.findById(id);
     }
 
-    public void criarUsuario(Usuario usuario) {
+    public void criarOuAtualizarUsuario(Usuario usuario) {
         _repository.saveOrUpdate(usuario);
     }
 

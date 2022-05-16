@@ -14,9 +14,10 @@ public class Usuario {
     private String nome;
     private String senha;
 
-    public Usuario(ObjectId _id, String nome, String senha) {
+    public Usuario(ObjectId id, String nome, String senha) {
         this.nome = nome;
         this.senha = senha;
+        this._id = id;
     }
 
     public Usuario() {

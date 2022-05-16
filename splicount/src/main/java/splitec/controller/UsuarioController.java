@@ -29,7 +29,7 @@ public class UsuarioController {
     @PostMapping("/upsert")
     public String criarOuAtualizarUsuario(@RequestBody Usuario usuario) {
         UsuarioService service = new UsuarioService();
-        service.criarUsuario(usuario);
+        service.criarOuAtualizarUsuario(usuario);
         return "Sucess";
     }
 
