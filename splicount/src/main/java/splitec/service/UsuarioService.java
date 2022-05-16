@@ -34,4 +34,8 @@ public class UsuarioService {
     public List<Usuario> listaTodos() {
         return _repository.findAll();
     }
+
+    public void deletar(ObjectId id) {
+        _repository.deleteById(id);
+    }
 }
