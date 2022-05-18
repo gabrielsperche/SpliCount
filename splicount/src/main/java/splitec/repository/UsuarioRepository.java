@@ -3,6 +3,7 @@ package splitec.repository;
 import dev.morphia.Datastore;
 import dev.morphia.DeleteOptions;
 import dev.morphia.UpdateOptions;
+import dev.morphia.query.Query;
 import dev.morphia.query.experimental.filters.Filters;
 import org.bson.types.ObjectId;
 import splitec.entities.Usuario;
@@ -33,8 +34,8 @@ public class UsuarioRepository {
         return _db.find(Usuario.class).filter(Filters.eq("_id", id)).first();
     }
 
-    public void saveOrUpdate(Usuario usuario) {
-        _db.save(usuario);
+    public Usuario saveOrUpdate(Usuario usuario) {
+        return _db.save(usuario);
     }
 
     public void update(Usuario usuario) {
@@ -43,5 +44,10 @@ public class UsuarioRepository {
 
     public void deleteById(ObjectId id) {
         _db.find(Usuario.class).filter(Filters.eq("_id", id)).delete(new DeleteOptions().multi(false));
+    }
+
+    public Usuario findByModel(Usuario model) {
+        Query<Usuario> usuarioQuery = _db.find(Usuario.class).filter(Filters.eq("email", model.getEmail()));
+        return usuarioQuery.first();
     }
 }
