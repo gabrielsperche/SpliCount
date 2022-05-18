@@ -59,7 +59,8 @@ public class UsuarioServiceTestCase {
         //arrange
         String nome = "Teste";
         String senha = "12345";
-        Usuario usuario = new Usuario(null, nome, senha);
+        String email = "gui@gmail.com";
+        Usuario usuario = new Usuario(null, nome, email, senha);
 
         //act
         UsuarioService SUT = new UsuarioService(_repository);
@@ -79,7 +80,9 @@ public class UsuarioServiceTestCase {
         ObjectId id = fixture.create(ObjectId.class);
         String nome = "Teste";
         String senha = "12345";
-        Usuario usuario = new Usuario(id, nome, senha);
+        String email = "gui@gmail.com";
+
+        Usuario usuario = new Usuario(id, nome, email, senha);
         _inMemoryDB.add(usuario);
 
         //act
@@ -115,9 +118,10 @@ public class UsuarioServiceTestCase {
         ObjectId id = fixture.create(ObjectId.class);
         String nome = "Teste";
         String senha = "12345";
-        Usuario usuario = new Usuario(id, nome, senha);
+        String email = "gui@gmail.com";
+        Usuario usuario = new Usuario(id, nome, email, senha);
         _inMemoryDB.add(usuario);
-        Usuario modeloParaAtualizar = new Usuario(id, "Atualizado", "54321");
+        Usuario modeloParaAtualizar = new Usuario(id, "Atualizado", "ale@gmail.com", "54321");
 
         //act
         UsuarioService SUT = new UsuarioService(_repository);
@@ -136,7 +140,8 @@ public class UsuarioServiceTestCase {
         ObjectId id = fixture.create(ObjectId.class);
         String nome = "Teste";
         String senha = "12345";
-        Usuario usuario = new Usuario(id, nome, senha);
+        String email = "gui@gmail.com";
+        Usuario usuario = new Usuario(id, nome, email, senha);
         _inMemoryDB.add(usuario);
 
         //act

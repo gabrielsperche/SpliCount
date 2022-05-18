@@ -12,10 +12,13 @@ public class Usuario {
     private ObjectId _id;
 
     private String nome;
+
+    private String email;
     private String senha;
 
-    public Usuario(ObjectId id, String nome, String senha) {
+    public Usuario(ObjectId id, String nome, String email, String senha) {
         this.nome = nome;
+        this.email = email;
         this.senha = senha;
         this._id = id;
     }
@@ -45,5 +48,13 @@ public class Usuario {
 
     public ObjectId getId() {
         return this._id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
