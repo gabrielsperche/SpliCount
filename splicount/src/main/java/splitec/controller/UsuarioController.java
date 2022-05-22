@@ -6,6 +6,7 @@ import org.bson.types.ObjectId;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.w3c.dom.html.HTMLTableCaptionElement;
 import splitec.entities.Usuario;
 import splitec.service.UsuarioService;
 
@@ -20,7 +21,7 @@ import java.util.List;
 public class UsuarioController {
 
     @PostMapping("/auth")
-    public ResponseEntity<Usuario> login(@RequestBody Usuario model) throws Exception {
+    public ResponseEntity<HttpStatus> login(@RequestBody Usuario model) throws Exception {
 
         UsuarioService service = new UsuarioService();
 
@@ -34,7 +35,7 @@ public class UsuarioController {
         if (!service.autenticarUsuario(model, usuario))
             return new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
 
-        return new ResponseEntity<>(usuario, HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
 
     @PostMapping("/upsert")

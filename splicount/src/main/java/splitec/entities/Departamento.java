@@ -10,25 +10,38 @@ public class Departamento implements IValorBase {
 
     private ObjectId _id;
     private String nome;
-    private final Entradas entradas = new Entradas();
-    private final Saidas saidas = new Saidas();
+    private final List<Entrada> entradas = new ArrayList<Entrada>();
+    private final List<Saida> saidas = new ArrayList<Saida>();
     private double orcamento;
-    private double meta;
     private double valorTotal;
 
     @Override
     public void calculaValorTotal() {
-        // valorEntradas = entradas.getValorTotal();
-        //double valorSaidas = saidas.getValorTotal();
-
-        //valorTotal = valorEntradas - valorSaidas;
+        this.valorTotal = calculaTotalEntradas() - calculaTotalSaidas();
     }
 
-    public ObjectId get_id() {
+    public double calculaTotalEntradas() {
+        double somaEntrada = 0;
+        for (Entrada entrada : entradas) {
+            somaEntrada += entrada.getValor();
+        }
+
+        return somaEntrada;
+    }
+    public double calculaTotalSaidas() {
+        double somaSaida = 0;
+        for (Saida saida : saidas) {
+            somaSaida += saida.getValor();
+        }
+
+        return somaSaida;
+    }
+
+    public ObjectId getId() {
         return _id;
     }
 
-    public void set_id(ObjectId _id) {
+    public void setId(ObjectId _id) {
         this._id = _id;
     }
 
@@ -40,14 +53,6 @@ public class Departamento implements IValorBase {
         this.nome = nome;
     }
 
-    public Entradas getEntradas() {
-        return entradas;
-    }
-
-    public Saidas getSaidas() {
-        return saidas;
-    }
-
     public double getOrcamento() {
         return orcamento;
     }
@@ -56,19 +61,43 @@ public class Departamento implements IValorBase {
         this.orcamento = orcamento;
     }
 
-    public double getMeta() {
-        return meta;
-    }
-
-    public void setMeta(double meta) {
-        this.meta = meta;
-    }
-
     public double getValorTotal() {
         return valorTotal;
     }
 
-    public void setValorTotal(double valorTotal) {
+    private void setValorTotal(double valorTotal) {
         this.valorTotal = valorTotal;
+    }
+
+    public void addEntrada(Entrada entrada) {
+        entradas.add(entrada);
+    }
+
+    public void addEntrada(List<Entrada> entradas) {
+        this.entradas.addAll(entradas);
+    }
+
+    public void removeEntrada(ObjectId id){
+        int size = entradas.size();
+        for (int i = 0; i < size; i++) {
+            if (entradas.get(i).getDepartamentoId() == id)
+                entradas.remove(i);
+        }
+    }
+
+    public void addSaida(Saida saida) {
+        saidas.add(saida);
+    }
+
+    public void addSaida(List<Saida> saida) {
+        this.saidas.addAll(saida);
+    }
+
+    public void removeSaida(ObjectId id){
+        int size = saidas.size();
+        for (int i = 0; i < size; i++) {
+            if (saidas.get(i).getDepartamentoId() == id)
+                saidas.remove(i);
+        }
     }
 }
