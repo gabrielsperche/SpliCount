@@ -1,13 +1,17 @@
 package splitec.entities;
 
 import com.mongodb.DBRef;
+import dev.morphia.annotations.Entity;
+import dev.morphia.annotations.Id;
 import org.bson.types.ObjectId;
 import splitec.entities.enums.TipoInsercao;
 
 import java.util.List;
 
+@Entity("Entrada")
 public class Entrada {
 
+    @Id
     private ObjectId _id;
     private double valor;
     private ObjectId departamentoId;

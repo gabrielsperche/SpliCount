@@ -1,13 +1,15 @@
 package splitec.controller;
 
+import org.bson.types.ObjectId;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import splitec.entities.Departamento;
+import splitec.entities.Usuario;
 import splitec.service.DepartamentoService;
+import splitec.service.UsuarioService;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/departamento")
@@ -32,4 +34,34 @@ public class DepartamentoController {
        else
            return new ResponseEntity<>("Criado", HttpStatus.CREATED);
     }
+
+    @GetMapping("/find/{id}")
+    public ResponseEntity<Departamento> encontrarDepartamentoPorId(@PathVariable ObjectId id) {
+
+        DepartamentoService service = new DepartamentoService();
+
+        Departamento departamento = service.encontraPorId(id);
+
+        return new ResponseEntity<>(departamento, HttpStatus.OK);
+    }
+
+    @GetMapping("/findall")
+    public ResponseEntity<List<Departamento>> listarTodosUsuarios() {
+
+        DepartamentoService service = new DepartamentoService();
+
+        return new ResponseEntity<>(service.listaTodos(), HttpStatus.OK);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> deleteUsuario(@PathVariable ObjectId id) {
+
+        DepartamentoService service = new DepartamentoService();
+
+        if (service.encontraPorId(id) == null)
+            return new ResponseEntity<>("Id não cadastrado", HttpStatus.NOT_FOUND);
+
+        return new ResponseEntity<>("Deletado", HttpStatus.OK);
+    }
+
 }

@@ -1,12 +1,15 @@
 package splitec.entities;
 
+import dev.morphia.annotations.Entity;
+import dev.morphia.annotations.Id;
 import org.bson.types.ObjectId;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Saida {
-
+@Id
     private ObjectId _id;
     private double valor;
     private ObjectId departamentoId;

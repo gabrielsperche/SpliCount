@@ -1,13 +1,16 @@
 package splitec.entities;
 
+import dev.morphia.annotations.Entity;
+import dev.morphia.annotations.Id;
 import org.bson.types.ObjectId;
 import splitec.entities.interfaces.IValorBase;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity("Departamento")
 public class Departamento implements IValorBase {
-
+    @Id
     private ObjectId _id;
     private String nome;
     private final List<Entrada> entradas = new ArrayList<Entrada>();

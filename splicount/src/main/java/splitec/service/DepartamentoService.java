@@ -1,7 +1,10 @@
 package splitec.service;
 
+import org.bson.types.ObjectId;
 import splitec.entities.Departamento;
 import splitec.repository.DepartamentoRepository;
+
+import java.util.List;
 
 //casos de usos de departamentos
 public class DepartamentoService {
@@ -23,5 +26,13 @@ public class DepartamentoService {
 
     public Departamento encontraPorModel(Departamento model) {
         return _departamentoRepository.findByModel(model);
+    }
+
+    public Departamento encontraPorId(ObjectId id) {
+        return _departamentoRepository.findById(id);
+    }
+
+    public List<Departamento> listaTodos() {
+        return  _departamentoRepository.findAll();
     }
 }

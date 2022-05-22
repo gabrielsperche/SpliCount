@@ -10,9 +10,7 @@ import org.bson.types.ObjectId;
 public class Usuario {
     @Id
     private ObjectId _id;
-
     private String nome;
-
     private String email;
     private String senha;
 
