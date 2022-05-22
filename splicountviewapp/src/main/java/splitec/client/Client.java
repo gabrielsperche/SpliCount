@@ -1,5 +1,6 @@
 package splitec.client;
 
+import entities.MessageResponse;
 import splitec.Constants;
 
 import java.net.URI;
@@ -9,7 +10,7 @@ import java.net.http.HttpResponse;
 
 public class Client implements Constants {
 
-    public String get(String url) throws Exception {
+    public MessageResponse get(String url) {
         try {
 
             HttpRequest httpClient = HttpRequest.newBuilder()
@@ -22,11 +23,11 @@ public class Client implements Constants {
             return handleRequest(httpClient);
 
         } catch (Exception e) {
-            return e.getLocalizedMessage();
+            return new MessageResponse(e.getLocalizedMessage(), false);
         }
     }
 
-    public static String post(String url, String body) {
+    public static MessageResponse post(String url, String body) {
         try {
 
             HttpRequest httpClient = HttpRequest.newBuilder()
@@ -39,11 +40,11 @@ public class Client implements Constants {
             return handleRequest(httpClient);
 
         } catch (Exception e) {
-            return e.getLocalizedMessage();
+            return new MessageResponse(e.getLocalizedMessage(), false);
         }
     }
 
-    public String delete(String url) throws Exception {
+    public MessageResponse delete(String url) {
         try {
 
             HttpRequest httpClient = HttpRequest.newBuilder()
@@ -56,11 +57,11 @@ public class Client implements Constants {
             return handleRequest(httpClient);
 
         } catch (Exception e) {
-            return e.getLocalizedMessage();
+            return new MessageResponse(e.getLocalizedMessage(), false);
         }
     }
 
-    public static String handleRequest(HttpRequest client) throws Exception {
+    public static MessageResponse handleRequest(HttpRequest client) {
         try {
             HttpResponse<String> response = HttpClient.newBuilder()
                     .followRedirects(HttpClient.Redirect.NORMAL)
@@ -71,13 +72,12 @@ public class Client implements Constants {
             if (String.valueOf(response.statusCode()).equals("202")
                     || String.valueOf(response.statusCode()).equals("201")
                     || String.valueOf(response.statusCode()).equals("200")) {
-                return response.body();
+                return new MessageResponse(response.body(), true);
             } else {
-                return REQUEST_ERROR + response.statusCode();
+                return new MessageResponse(REQUEST_ERROR + response.statusCode(), false);
             }
         } catch (Exception e) {
-            return e.getLocalizedMessage();
+            return new MessageResponse(e.getLocalizedMessage(), false);
         }
     }
-
 }

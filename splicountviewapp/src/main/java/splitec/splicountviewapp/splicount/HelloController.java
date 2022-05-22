@@ -1,5 +1,6 @@
 package splitec.splicountviewapp.splicount;
 
+import entities.MessageResponse;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,20 +24,17 @@ public class HelloController {
 
     @FXML
     protected void onAcessarClick(ActionEvent event) {
-
         try {
-            Service.auth(txtEmail.getText(), txtSenha.getText());
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("DashBoard.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
-            stage.setTitle("Hello!");
-            stage.setScene(scene);
-            stage.show();
+            MessageResponse response = Service.auth(txtEmail.getText(), txtSenha.getText());
+            if (response.isSucess()) {
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("DashBoard.fxml"));
+                Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
+                stage.setTitle("Hello!");
+                stage.setScene(scene);
+                stage.show();
+            }
         } catch (Exception e) {
-            throw new RuntimeException(e);
+
         }
-
-
-
-
     }
 }

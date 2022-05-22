@@ -1,15 +1,16 @@
 package splitec.service;
 
+import entities.MessageResponse;
 import splitec.repository.Repository;
 
 public class Service extends Repository {
 
     //TODO: Criar validação e mensagem de erro bonitinha pro front
-    public static String auth(String email, String senha) throws Exception {
+    public static MessageResponse auth(String email, String senha) {
         return buscaUsuario(email, senha);
     }
 
-    public static String createUser(String email, String senha, String nome) throws Exception {
+    public static MessageResponse createUser(String email, String senha, String nome) throws Exception {
         return criaUsuario(email, senha, nome);
     }
 

@@ -41,7 +41,7 @@
       </Button>
       <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="1058.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../java/splitec/Images/Remove%20red%20eye.png" />
+            <Image url="@Images/Remove red eye.png" />
          </image>
       </ImageView>
    </Group>
@@ -64,7 +64,7 @@
       </Text>
       <ImageView fitHeight="117.0" fitWidth="117.0" layoutX="140.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Logo.png" />
+            <Image url="@Images/Logo.png" />
          </image></ImageView>
    </Group>
 </Group>

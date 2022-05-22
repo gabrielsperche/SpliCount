@@ -11,42 +11,42 @@
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#730086" height="706.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="56.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../java/splitec/Images/Add%20moderator.png" />
+                <Image url="@Images/Add moderator.png" />
             </image>
         </ImageView>
         <ImageView fitWidth="88.0" layoutX="28.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../java/splitec/Images/Line%201.png" />
+                <Image url="@Images/Line 1.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="48.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../java/splitec/Images/Attach%20money.png" />
+                <Image url="@Images/Attach money.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="56.0" layoutY="633.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../java/splitec/Images/Logout.png" />
+                <Image url="@Images/Logout.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="56.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../java/splitec/Images/Person%20add.png" />
+                <Image url="@Images/Person add.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="48.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../java/splitec/Images/Rectangle%2013.png" />
+                <Image url="@Images/Rectangle 13.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="56.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../java/splitec/Images/Dashboard%20(1).png" />
+                <Image url="@Images/Dashboard.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="1211.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../java/splitec/Images/Account%20circle.png" />
+                <Image url="@Images/Account circle.png" />
             </image>
         </ImageView>
         <Text layoutX="186.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Splicount" wrappingWidth="281.13671875">
@@ -61,7 +61,7 @@
         </Text>
         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="58.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../java/splitec/Images/Post%20add%20roxo.png" />
+                <Image url="@Images/Post add roxo.png" />
             </image>
         </ImageView>
     </children>
