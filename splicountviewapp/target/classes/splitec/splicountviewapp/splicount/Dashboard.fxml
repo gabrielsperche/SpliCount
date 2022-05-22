@@ -5,11 +5,11 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="624.0" prefWidth="1190.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="splitec.splicountviewapp.splicount.Dashboard">
+<AnchorPane prefHeight="624.0" prefWidth="1190.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="splitec.splicountviewapp.splicount.DashboardController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d0d0d0" height="57.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#730086" height="706.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
-      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="56.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="56.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../java/splitec/Images/Add%20moderator.png" />
          </image>
@@ -29,12 +29,12 @@
             <Image url="@../../../../java/splitec/Images/Logout.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="56.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="56.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../java/splitec/Images/Person%20add.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="58.0" layoutY="392.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="58.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../java/splitec/Images/Post%20add.png" />
          </image>

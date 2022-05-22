@@ -6,19 +6,10 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<!--
-
-
-
-
-
-
--->
-
-<Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="splitec.splicountviewapp.splicount.HelloController">
    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="706.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
    <Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1%22%3E">
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="706.0" layoutX="568.0" onMouseClicked="#Autenticar" stroke="BLACK" strokeType="INSIDE" width="711.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="706.0" layoutX="568.0" stroke="BLACK" strokeType="INSIDE" width="711.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="730086" height="706.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="569.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="350.0" layoutX="758.0" layoutY="178.0" stroke="#d1d5da" strokeType="INSIDE" width="362.0" />
       <Text fill="#222831" layoutX="847.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entre com sua conta">
@@ -34,14 +25,16 @@
       <Label layoutX="783.0" layoutY="295.0" text="Usuário">
          <font>
             <Font size="16.0" />
-         </font></Label>
+         </font>
+      </Label>
       <Label layoutX="783.0" layoutY="376.0" text="Senha">
          <font>
             <Font name="Arial" size="16.0" />
-         </font></Label>
-      <TextField layoutX="783.0" layoutY="320.0" prefHeight="30.0" prefWidth="305.0" />
-      <TextField layoutX="783.0" layoutY="396.0" prefHeight="30.0" prefWidth="305.0" />
-      <Button fx:id="btnAcessar" layoutX="783.0" layoutY="457.0" mnemonicParsing="false" onMouseClicked="#Autenticar" prefHeight="37.0" prefWidth="308.0" style="-fx-background-color: #730086;" text="Acessar" textFill="#f1f8ff">
+         </font>
+      </Label>
+      <TextField fx:id="txtEmail" layoutX="783.0" layoutY="320.0" onAction="#onAcessarClick" prefHeight="30.0" prefWidth="305.0" />
+      <TextField fx:id="txtSenha" layoutX="783.0" layoutY="396.0" onAction="#onAcessarClick" prefHeight="30.0" prefWidth="305.0" />
+      <Button fx:id="btnAcessar" layoutX="783.0" layoutY="457.0" mnemonicParsing="false" onAction="#onAcessarClick" prefHeight="37.0" prefWidth="308.0" style="-fx-background-color: #730086;" text="Acessar" textFill="#f1f8ff">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
@@ -54,7 +47,7 @@
    </Group>
    <Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1%22%3E">
    <Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" />
-      <Text fill="WHITE" layoutX="261.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pliCount" wrappingWidth="214.13671875">
+      <Text fill="WHITE" layoutX="222.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pliCount" wrappingWidth="214.13671875">
          <font>
             <Font name="Arial Bold" size="40.0" />
          </font>
@@ -62,16 +55,16 @@
       <Text fill="#f0f5f9" layoutX="207.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="by Splitec">
          <font>
             <Font name="Arial Bold" size="26.0" />
-         </font></Text>
+         </font>
+      </Text>
       <Text fill="#f0f5f9" layoutX="81.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aplicação responsável pela organização de finanças dentro de uma empresa." textAlignment="CENTER" wrappingWidth="373.384765625">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
       </Text>
-      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="169.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="117.0" fitWidth="117.0" layoutX="140.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../java/splitec/Images/Logo.png" />
-         </image>
-      </ImageView>
+            <Image url="@../../../../../../../Logo.png" />
+         </image></ImageView>
    </Group>
 </Group>
