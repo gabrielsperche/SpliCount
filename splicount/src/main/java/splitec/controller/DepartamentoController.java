@@ -16,7 +16,7 @@ import java.util.List;
 public class DepartamentoController {
 
    @PostMapping("/upsert")
-    public ResponseEntity<String> criarOuAtualizarDepartmento(@RequestBody Departamento model) {
+    public ResponseEntity<String> criarOuAtualizarDepartamento(@RequestBody Departamento model) {
        DepartamentoService service = new DepartamentoService();
        boolean isUpdate = model.getId() != null;
 
@@ -46,7 +46,7 @@ public class DepartamentoController {
     }
 
     @GetMapping("/findall")
-    public ResponseEntity<List<Departamento>> listarTodosUsuarios() {
+    public ResponseEntity<List<Departamento>> listarTodoDepartamento() {
 
         DepartamentoService service = new DepartamentoService();
 
@@ -54,12 +54,14 @@ public class DepartamentoController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> deleteUsuario(@PathVariable ObjectId id) {
+    public ResponseEntity<String> deletarDepartamento(@PathVariable ObjectId id) {
 
         DepartamentoService service = new DepartamentoService();
 
         if (service.encontraPorId(id) == null)
             return new ResponseEntity<>("Id não cadastrado", HttpStatus.NOT_FOUND);
+
+        service.deletar(id);
 
         return new ResponseEntity<>("Deletado", HttpStatus.OK);
     }

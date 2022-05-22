@@ -35,4 +35,8 @@ public class DepartamentoService {
     public List<Departamento> listaTodos() {
         return  _departamentoRepository.findAll();
     }
+
+    public void deletar(ObjectId id) {
+        _departamentoRepository.deleteById(id);
+    }
 }

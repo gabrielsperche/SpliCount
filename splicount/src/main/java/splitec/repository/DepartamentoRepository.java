@@ -47,8 +47,6 @@ public class DepartamentoRepository implements IBaseRepository<Departamento>{
     @Override
     public Departamento findByModel(Departamento model) {
         Query<Departamento> query = _db.find(Departamento.class).filter(Filters.eq("nome", model.getNome()));
-
-
         return query.first();
     }
 }

@@ -85,6 +85,8 @@ public class UsuarioController {
         if (service.encontraPorId(id) == null)
             return new ResponseEntity<>("Id não cadastrado", HttpStatus.NOT_FOUND);
 
+        service.deletar(id);
+
         return new ResponseEntity<>("Deletado", HttpStatus.OK);
     }
 }
