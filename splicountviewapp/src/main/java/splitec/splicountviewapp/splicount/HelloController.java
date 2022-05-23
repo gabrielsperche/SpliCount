@@ -3,6 +3,7 @@ package splitec.splicountviewapp.splicount;
 import entities.MessageResponse;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import splitec.service.UsuarioService;
 
@@ -19,8 +20,22 @@ public class HelloController {
             if (response.isSucess()) {
                 HelloApplication.changeScreen("dashboard");
             }
-        } catch (Exception e) {
+            else{
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText(response.getMensagem());
 
+                alert.show();
+            }
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText(e.getMessage());
+
+            alert.show();
         }
+    }
+
+    @FXML
+    protected void onCadastrarClick(ActionEvent event) {
+        HelloApplication.changeScreen("cadastrarUsuario");
     }
 }
