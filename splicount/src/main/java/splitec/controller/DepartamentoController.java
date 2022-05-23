@@ -21,8 +21,12 @@ public class DepartamentoController {
     @PostMapping("/upsert")
     public ResponseEntity<String> criarOuAtualizarDepartamento(@RequestBody DepartamentoDTO model) {
        DepartamentoService service = new DepartamentoService();
+       EmpresaService empresaService = new EmpresaService();
+
        boolean isUpdate = model.getDepartamento().getId() != null;
 
+       if (!empresaService.exiteAlgum(model.getEmpresaId()))
+           return new ResponseEntity<>("Empresa não encontrada", HttpStatus.NOT_FOUND);
        if (!service.verificaModel(model.getDepartamento()))
            return new ResponseEntity<>("Parâmetros incorretos", HttpStatus.BAD_REQUEST);
        if (service.encontraPorModel(model.getDepartamento()) != null)
