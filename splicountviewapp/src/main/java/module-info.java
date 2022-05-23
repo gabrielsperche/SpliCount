@@ -13,5 +13,6 @@ module splitec.splicountviewapp.splicount {
     requires com.fasterxml.jackson.databind;
 
     opens splitec.splicountviewapp.splicount to javafx.fxml;
+    opens entities to javafx.base;
     exports splitec.splicountviewapp.splicount;
 }
