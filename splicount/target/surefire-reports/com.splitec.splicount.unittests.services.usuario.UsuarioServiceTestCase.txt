@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.splitec.splicount.unittests.services.usuario.UsuarioServiceTestCase
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.133 s - in com.splitec.splicount.unittests.services.usuario.UsuarioServiceTestCase
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.15 s - in com.splitec.splicount.unittests.services.usuario.UsuarioServiceTestCase
