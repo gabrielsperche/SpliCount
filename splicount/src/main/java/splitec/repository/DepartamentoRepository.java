@@ -49,4 +49,9 @@ public class DepartamentoRepository implements IBaseRepository<Departamento>{
         Query<Departamento> query = _db.find(Departamento.class).filter(Filters.eq("nome", model.getNome()));
         return query.first();
     }
+
+    public List<Departamento> findAll(List<ObjectId> departamentosIds) {
+        Query<Departamento> query = _db.find(Departamento.class).filter(Filters.in("_id", departamentosIds));
+        return query.iterator().toList();
+    }
 }

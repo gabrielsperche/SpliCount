@@ -1,5 +1,6 @@
 package splitec.entities;
 
+import com.mongodb.DBRef;
 import dev.morphia.annotations.Entity;
 import dev.morphia.annotations.Id;
 import org.bson.types.ObjectId;
@@ -17,27 +18,32 @@ public class Departamento implements IValorBase {
     private final List<Saida> saidas = new ArrayList<Saida>();
     private double orcamento;
     private double valorTotal;
+    private double valorTotalEntradas;
+    private double valorTotalSaidas;
 
     @Override
     public void calculaValorTotal() {
-        this.valorTotal = calculaTotalEntradas() - calculaTotalSaidas();
+        calculaTotalEntradas();
+        calculaTotalSaidas();
+        this.valorTotal =  valorTotalEntradas - valorTotalSaidas;
     }
 
-    public double calculaTotalEntradas() {
+    public void calculaTotalEntradas() {
         double somaEntrada = 0;
         for (Entrada entrada : entradas) {
             somaEntrada += entrada.getValor();
         }
 
-        return somaEntrada;
+        valorTotalEntradas = somaEntrada;
     }
-    public double calculaTotalSaidas() {
+
+    public void calculaTotalSaidas() {
         double somaSaida = 0;
         for (Saida saida : saidas) {
             somaSaida += saida.getValor();
         }
 
-        return somaSaida;
+        valorTotalSaidas = somaSaida;
     }
 
     public ObjectId getId() {
@@ -70,6 +76,22 @@ public class Departamento implements IValorBase {
 
     private void setValorTotal(double valorTotal) {
         this.valorTotal = valorTotal;
+    }
+
+    public List<Entrada> getEntradas() {
+        return entradas;
+    }
+
+    public List<Saida> getSaidas() {
+        return saidas;
+    }
+
+    public double getValorTotalEntradas() {
+        return valorTotalEntradas;
+    }
+
+    public double getValorTotalSaidas() {
+        return valorTotalSaidas;
     }
 
     public void addEntrada(Entrada entrada) {

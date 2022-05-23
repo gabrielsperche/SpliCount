@@ -20,6 +20,11 @@ public class Saida {
         this.departamentoId = departamentoId;
     }
 
+    public Saida(double valor, ObjectId departamentoId) {
+        this.valor = valor;
+        this.departamentoId = departamentoId;
+    }
+
     public Saida() {
     }
 

@@ -37,4 +37,8 @@ public class EmpresaService {
     public List<Empresa> listaTodos() {
         return _repository.findAll();
     }
+
+    public boolean exiteAlgum(ObjectId id) {
+        return _repository.existAny(id);
+    }
 }
