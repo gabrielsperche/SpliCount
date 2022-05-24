@@ -26,6 +26,8 @@ public class Entrada {
         this.valor = valor;
         this.departamentoId = departamentoId;
     }
+    public Entrada(){
+    }
 
     public ObjectId get_id() {
         return _id;
