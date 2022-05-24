@@ -60,7 +60,8 @@ public class UsuarioServiceTestCase {
         String nome = "Teste";
         String senha = "12345";
         String email = "gui@gmail.com";
-        Usuario usuario = new Usuario(null, nome, email, senha);
+        String empresa = "splitec";
+        Usuario usuario = new Usuario(null, nome, email, senha, empresa);
 
         //act
         UsuarioService SUT = new UsuarioService(_repository);
@@ -81,8 +82,9 @@ public class UsuarioServiceTestCase {
         String nome = "Teste";
         String senha = "12345";
         String email = "gui@gmail.com";
+        String empresa = "splitec";
 
-        Usuario usuario = new Usuario(id, nome, email, senha);
+        Usuario usuario = new Usuario(id, nome, email, senha, empresa);
         _inMemoryDB.add(usuario);
 
         //act
@@ -119,9 +121,10 @@ public class UsuarioServiceTestCase {
         String nome = "Teste";
         String senha = "12345";
         String email = "gui@gmail.com";
-        Usuario usuario = new Usuario(id, nome, email, senha);
+        String empresa = "splitec";
+        Usuario usuario = new Usuario(id, nome, email, senha, empresa);
         _inMemoryDB.add(usuario);
-        Usuario modeloParaAtualizar = new Usuario(id, "Atualizado", "ale@gmail.com", "54321");
+        Usuario modeloParaAtualizar = new Usuario(id, "Atualizado", "ale@gmail.com", "54321", empresa);
 
         //act
         UsuarioService SUT = new UsuarioService(_repository);
@@ -141,7 +144,8 @@ public class UsuarioServiceTestCase {
         String nome = "Teste";
         String senha = "12345";
         String email = "gui@gmail.com";
-        Usuario usuario = new Usuario(id, nome, email, senha);
+        String empresa = "splitec";
+        Usuario usuario = new Usuario(id, nome, email, senha, empresa);
         _inMemoryDB.add(usuario);
 
         //act

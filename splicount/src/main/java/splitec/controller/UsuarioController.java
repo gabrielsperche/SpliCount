@@ -7,7 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.w3c.dom.html.HTMLTableCaptionElement;
+import splitec.entities.Empresa;
 import splitec.entities.Usuario;
+import splitec.service.EmpresaService;
 import splitec.service.UsuarioService;
 
 import java.util.List;
@@ -21,7 +23,7 @@ import java.util.List;
 public class UsuarioController {
 
     @PostMapping("/auth")
-    public ResponseEntity<HttpStatus> login(@RequestBody Usuario model) throws Exception {
+    public ResponseEntity<String> login(@RequestBody Usuario model) throws Exception {
 
         UsuarioService service = new UsuarioService();
 
@@ -35,7 +37,10 @@ public class UsuarioController {
         if (!service.autenticarUsuario(model, usuario))
             return new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
 
-        return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        EmpresaService companyService = new EmpresaService();
+        Empresa userCompany = companyService.encontraPorModel(new Empresa(null, usuario.getEmpresa()));
+
+        return new ResponseEntity<>(userCompany.getId().toString(), HttpStatus.ACCEPTED);
     }
 
     @PostMapping("/upsert")
@@ -50,6 +55,11 @@ public class UsuarioController {
             return new ResponseEntity<>("Email já cadastrado", HttpStatus.BAD_REQUEST);
 
         service.criarOuAtualizarUsuario(model);
+
+        Empresa userCompany = new Empresa();
+        EmpresaService companyService = new EmpresaService();
+        userCompany.setNome(model.getEmpresa());
+        companyService.criarOuAtualizarEmpresa(userCompany);
 
         if (model.getId() == null)
             return new ResponseEntity<>("Erro ao salvar", HttpStatus.BAD_REQUEST);

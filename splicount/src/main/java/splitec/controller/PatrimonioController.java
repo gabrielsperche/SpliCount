@@ -18,7 +18,7 @@ public class PatrimonioController {
 
         if (id == null)
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
-        if (empresaService.exiteAlgum(id))
+        if (!empresaService.exiteAlgum(id))
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
 
         double valor = service.getValorTotalPorEmpresa(id);

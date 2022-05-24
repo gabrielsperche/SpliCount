@@ -43,7 +43,7 @@ public class CadDepartamentoController implements Initializable {
             String nome = txtNomeDepart.getText();
             Double orcamento = Double.parseDouble(txtOrcamento.getText());
 
-            MessageResponse response = DepartamentoService.createDepartamento(nome, orcamento, "628ad80d650e831dc853ba23");
+            MessageResponse response = DepartamentoService.createDepartamento(nome, orcamento);
             if (response.isSucess()) {
                 listDepartamentos.getItems().add(new Departamento(nome, orcamento));
             }

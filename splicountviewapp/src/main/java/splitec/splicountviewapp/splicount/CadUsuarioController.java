@@ -17,7 +17,8 @@ public class CadUsuarioController {
     @FXML
     protected void onCadastrarClick(ActionEvent event) {
         try {
-            MessageResponse response = UsuarioService.createUser(txtEmail.getText(), txtSenha.getText(), txtNome.getText());
+            //TODO Criar txtBox pra receber o nome da empresa no cadastro!
+            MessageResponse response = UsuarioService.createUser(txtEmail.getText(), txtSenha.getText(), txtNome.getText(), "");
             if (response.isSucess()) {
                 HelloApplication.changeScreen("main");
             }

@@ -27,7 +27,7 @@ public class EmpresaRepository implements IBaseRepository<Empresa>{
 
     @Override
     public boolean existAny(ObjectId id) {
-        return id != null && _db.find(Departamento.class).filter(Filters.eq("_id", id)).count() > 0;
+        return id != null && _db.find(Empresa.class).filter(Filters.eq("_id", id)).count() > 0;
     }
 
     @Override

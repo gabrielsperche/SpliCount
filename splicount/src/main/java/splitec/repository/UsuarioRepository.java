@@ -52,4 +52,5 @@ public class UsuarioRepository implements IBaseRepository<Usuario>{
         Query<Usuario> usuarioQuery = _db.find(Usuario.class).filter(Filters.eq("email", model.getEmail()));
         return usuarioQuery.first();
     }
+
 }
