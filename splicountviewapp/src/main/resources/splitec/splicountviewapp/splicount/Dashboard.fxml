@@ -68,5 +68,6 @@
          </font>
       </Text>
       <Button fx:id="btnDepartScreen" layoutX="50.0" layoutY="386.0" maxHeight="48.0" maxWidth="48.0" minHeight="48.0" minWidth="48.0" mnemonicParsing="false" onAction="#onDepartScreenClick" opacity="0.0" prefHeight="48.0" prefWidth="48.0" />
+      <Button fx:id="btnEmpresaScreen" layoutX="48.0" layoutY="304.0" maxHeight="48.0" maxWidth="48.0" minHeight="48.0" minWidth="48.0" mnemonicParsing="false" onAction="#onEmpresaScreenClick" opacity="0.0" prefHeight="48.0" prefWidth="48.0" />
    </children>
 </AnchorPane>

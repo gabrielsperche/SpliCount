@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="splitec.splicountviewapp.splicount.HelloController">
+<Group xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="splitec.splicountviewapp.splicount.HelloController">
    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="706.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
    <Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1%22%3E">
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="706.0" layoutX="568.0" stroke="BLACK" strokeType="INSIDE" width="711.0" />
@@ -33,7 +37,7 @@
          </font>
       </Label>
       <TextField fx:id="txtEmail" layoutX="783.0" layoutY="320.0" onAction="#onAcessarClick" prefHeight="30.0" prefWidth="305.0" />
-      <TextField fx:id="txtSenha" layoutX="783.0" layoutY="396.0" onAction="#onAcessarClick" prefHeight="30.0" prefWidth="305.0" />
+      <TextField fx:id="txtSenha" accessibleRole="PASSWORD_FIELD" layoutX="783.0" layoutY="396.0" onAction="#onAcessarClick" prefHeight="30.0" prefWidth="305.0" />
       <Button fx:id="btnAcessar" layoutX="783.0" layoutY="457.0" mnemonicParsing="false" onAction="#onAcessarClick" prefHeight="37.0" prefWidth="308.0" style="-fx-background-color: #730086;" text="Acessar" textFill="#f1f8ff">
          <font>
             <Font name="Arial Bold" size="16.0" />
@@ -44,6 +48,21 @@
             <Image url="@Images/Remove red eye.png" />
          </image>
       </ImageView>
+      <Button fx:id="btnTelaCadastro" layoutX="912.0" layoutY="542.0" mnemonicParsing="false" onAction="#onCadastrarClick" opacity="0.0" prefHeight="30.0" prefWidth="208.0" style="-fx-background-color: #730086;" text="Não tenho cadastro" textAlignment="CENTER" textFill="#730086">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Button>
+      <Text fill="#730086" layoutX="961.0" layoutY="562.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Não tenho cadastro">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtAlert" fill="#ae0c0c" layoutX="758.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entre com sua conta" textAlignment="CENTER" visible="false" wrappingWidth="362.7421875">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Text>
    </Group>
    <Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1%22%3E">
    <Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" />
