@@ -23,8 +23,9 @@ public class HelloController {
         try {
             MessageResponse response = UsuarioService.auth(txtEmail.getText(), txtSenha.getText());
             if (response.isSucess()) {
-                HelloApplication.changeScreen("dashboard");
-            }
+               HelloApplication.changeScreen("dashboard");
+
+           }
             else{
                 txtAlert.setText(response.getMensagem());
                 txtAlert.setVisible(true);

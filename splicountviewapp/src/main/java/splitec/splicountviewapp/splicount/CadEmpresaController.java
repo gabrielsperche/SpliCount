@@ -5,6 +5,7 @@ import entities.MessageResponse;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -15,20 +16,19 @@ import splitec.service.EmpresaService;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class CadEmpresaController implements Initializable {
-    @FXML
-    private Stage stage = new Stage();
+public class CadEmpresaController {
+
     @FXML
     private TextField txtNomeEmpresa;
     @FXML
     private TextField txtCnpj;
+    @FXML
+    private Button btnDepartScreen;
+    @FXML
+    private Button btnUserScreen;
+    @FXML
+    private Button btnDashScreen;
 
-    @FXML
-    private TableColumn<Empresa, String> nameColumn;
-    @FXML
-    private TableColumn<Empresa, String> cnpjColumn;
-    @FXML
-    private TableView<Empresa> listEmpresas;
 
     @FXML
     protected void onCadastrarClick(ActionEvent event) {
@@ -37,17 +37,37 @@ public class CadEmpresaController implements Initializable {
             String cnpj = txtCnpj.getText();
 
             MessageResponse response = EmpresaService.createEmpresa(nome, cnpj);
-            if (response.isSucess()) {
-                listEmpresas.getItems().add(new Empresa(nome, cnpj));
-            }
+
         } catch (Exception e) {
             throw e;
         }
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        nameColumn.setCellValueFactory(new PropertyValueFactory<>("nome"));
-        cnpjColumn.setCellValueFactory(new PropertyValueFactory<>("cnpj"));
+
+    @FXML
+    protected void onDepartScreenClick(ActionEvent event) {
+        try {
+            HelloApplication.changeScreen("departamento");
+        } catch (Exception e) {
+
+        }
+    }
+
+    @FXML
+    protected void onDashScreenClick(ActionEvent event) {
+        try {
+            HelloApplication.changeScreen("dashboard");
+        } catch (Exception e) {
+
+        }
+    }
+
+    @FXML
+    protected void onUserScreenClick(ActionEvent event) {
+        try {
+            HelloApplication.changeScreen("cadastrarUsuario");
+        } catch (Exception e) {
+
+        }
     }
 }
