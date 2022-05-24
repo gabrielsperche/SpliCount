@@ -4,7 +4,9 @@ import entities.MessageResponse;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import splitec.service.UsuarioService;
 
 public class HelloController {
@@ -14,6 +16,9 @@ public class HelloController {
     private TextField txtSenha;
 
     @FXML
+    private Text txtAlert;
+
+    @FXML
     protected void onAcessarClick(ActionEvent event) {
         try {
             MessageResponse response = UsuarioService.auth(txtEmail.getText(), txtSenha.getText());
@@ -21,16 +26,12 @@ public class HelloController {
                 HelloApplication.changeScreen("dashboard");
             }
             else{
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText(response.getMensagem());
-
-                alert.show();
+                txtAlert.setText(response.getMensagem());
+                txtAlert.setVisible(true);
             }
         } catch (Exception e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText(e.getMessage());
-
-            alert.show();
+            txtAlert.setText(e.getMessage());
+            txtAlert.setVisible(true);
         }
     }
 

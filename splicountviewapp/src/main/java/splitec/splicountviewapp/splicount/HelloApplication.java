@@ -14,6 +14,7 @@ public class HelloApplication extends Application {
 
     private static Scene mainScene;
     private static Scene cadastroUsuarioScene;
+    private static Scene cadastroEmpresaScene;
     private static Scene dashboardScene;
     private static Scene departamentoScene;
 
@@ -26,6 +27,9 @@ public class HelloApplication extends Application {
 
         Parent fxmlCadastroUsuario= FXMLLoader.load(getClass().getResource("CadUsuario.fxml"));
         cadastroUsuarioScene = new Scene(fxmlCadastroUsuario, 1200, 720);
+
+        Parent fxmlCadastroEmpresa= FXMLLoader.load(getClass().getResource("CadEmpresa.fxml"));
+        cadastroEmpresaScene = new Scene(fxmlCadastroEmpresa, 1200, 720);
 
         Parent fxmlDashboard= FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
         dashboardScene = new Scene(fxmlDashboard, 1200, 720);
@@ -45,6 +49,9 @@ public class HelloApplication extends Application {
                 break;
             case "cadastrarUsuario":
                 stage.setScene(cadastroUsuarioScene);
+                break;
+            case "cadastrarEmpresa":
+                stage.setScene(cadastroEmpresaScene);
                 break;
             case "dashboard":
                 stage.setScene(dashboardScene);

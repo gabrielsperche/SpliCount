@@ -58,6 +58,11 @@
             <Font name="Arial" size="18.0" />
          </font>
       </Text>
+      <Text fx:id="txtAlert" fill="#ae0c0c" layoutX="758.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entre com sua conta" textAlignment="CENTER" visible="false" wrappingWidth="362.7421875">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Text>
    </Group>
    <Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1%22%3E">
    <Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" />

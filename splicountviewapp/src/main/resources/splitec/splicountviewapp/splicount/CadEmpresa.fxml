@@ -84,7 +84,7 @@
         <TableView fx:id="listDepartamentos" layoutX="220.0" layoutY="386.0" prefHeight="275.0" prefWidth="861.0">
             <columns>
                 <TableColumn fx:id="nameColumn" prefWidth="336.0" text="Razão Social" />
-                <TableColumn fx:id="orcamentoColumn" minWidth="0.0" prefWidth="524.0" text="CNPJ" />
+                <TableColumn fx:id="cnpjColumn" minWidth="0.0" prefWidth="524.0" text="CNPJ" />
             </columns></TableView>
         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="56.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
             <image>

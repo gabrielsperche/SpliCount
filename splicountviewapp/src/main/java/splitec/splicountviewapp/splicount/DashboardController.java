@@ -16,4 +16,13 @@ public class DashboardController {
 
         }
     }
+
+    @FXML
+    protected void onEmpresaScreenClick(ActionEvent event) {
+        try {
+            HelloApplication.changeScreen("cadastrarEmpresa");
+        } catch (Exception e) {
+
+        }
+    }
 }
