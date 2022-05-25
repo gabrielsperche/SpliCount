@@ -74,7 +74,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://user-images.githubusercontent.com/57714182/170361751-16697a8c-ab2c-4a06-b0aa-ecce8f6ab25c.png" width="100px;"/><br>
+        <img src="https://user-images.githubusercontent.com/57714182/170363870-681d1626-653b-44a3-9612-27073439710c.png" width="100px;"/><br>
         <sub>
           <b>Alessandro Toledo</b>
         </sub>
@@ -82,7 +82,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://user-images.githubusercontent.com/57714182/170362113-86905ccb-bdaa-4f61-ba1b-648253a28bcd.png" width="100px;" /><br>
+        <img src="https://user-images.githubusercontent.com/57714182/170363990-fbe5fdf2-12ee-418b-b282-58c6f369a95d.png" width="100px;" /><br>
         <sub>
           <b>Gabriel Tadeu</b>
         </sub>
