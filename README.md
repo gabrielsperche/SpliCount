@@ -106,7 +106,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://user-images.githubusercontent.com/57714182/170363135-6f7ef0c8-f89c-46d5-865a-3beef4114939.png" width="100px;" /><br>
+        <img src="https://user-images.githubusercontent.com/57714182/170364524-773fc4c1-7e81-4aef-9663-1f043208245a.png" width="100px;" /><br>
         <sub>
           <b>Murilo Moura</b>
         </sub>
