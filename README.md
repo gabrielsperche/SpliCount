@@ -8,7 +8,7 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
 
-<img src="imag.png" alt="imagem">
+![image](https://user-images.githubusercontent.com/57714182/170361279-62584f86-4821-49cb-acf4-5dfd608d5587.png)
 
 > Sua API para controle financeiro empresarial
 
@@ -74,15 +74,17 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <img src="https://user-images.githubusercontent.com/57714182/170361751-16697a8c-ab2c-4a06-b0aa-ecce8f6ab25c.png" width="100px;"/><br>
         <sub>
-          <b>Iuri Silva</b>
+          <b>Alessandro Toledo</b>
         </sub>
       </a>
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://s2.glbimg.com/FUcw2usZfSTL6yCCGj3L3v3SpJ8=/smart/e.glbimg.com/og/ed/f/original/2019/04/25/zuckerberg_podcast.jpg" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        ![image](https://user-images.githubusercontent.com/57714182/170362113-86905ccb-bdaa-4f61-ba1b-648253a28bcd.png)
+
+        <img src="https://user-images.githubusercontent.com/57714182/170362113-86905ccb-bdaa-4f61-ba1b-648253a28bcd.png" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
         <sub>
           <b>Mark Zuckerberg</b>
         </sub>
@@ -98,14 +100,5 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
   </tr>
 </table>
-
-
-## 😄 Seja um dos contribuidores<br>
-
-Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.
-
-## 📝 Licença
-
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 
 [⬆ Voltar ao topo](#nome-do-projeto)<br>
