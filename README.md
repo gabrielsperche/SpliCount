@@ -74,7 +74,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://user-images.githubusercontent.com/57714182/170363870-681d1626-653b-44a3-9612-27073439710c.png" width="100px;"/><br>
+        <img src="https://user-images.githubusercontent.com/57714182/170365203-6df7cc00-e852-45bc-a11e-677f64f6feb6.png" width="100px;"/><br>
         <sub>
           <b>Alessandro Toledo</b>
         </sub>
