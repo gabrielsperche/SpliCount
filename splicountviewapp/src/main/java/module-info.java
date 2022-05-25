@@ -14,6 +14,6 @@ module splitec.splicountviewapp.splicount {
     requires org.mongodb.bson;
 
     opens splitec.splicountviewapp.splicount to javafx.fxml;
-    opens entities to javafx.base;
+    opens entities to javafx.base, com.fasterxml.jackson.databind;
     exports splitec.splicountviewapp.splicount;
 }

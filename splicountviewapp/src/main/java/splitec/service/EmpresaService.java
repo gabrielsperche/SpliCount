@@ -1,5 +1,6 @@
 package splitec.service;
 
+import entities.Conta;
 import entities.Empresa;
 import entities.MessageResponse;
 import splitec.repository.EmpresaRepository;
@@ -9,7 +10,7 @@ public class EmpresaService extends EmpresaRepository {
         return criaEmpresa(nome, orcamento);
     }
 
-    public static Empresa getInfoEmpresa(String idEmpresa) {
-        return infosEmpresa(idEmpresa);
+    public static Empresa getInfoEmpresa() {
+        return infosEmpresa(Conta.getIdEmpresa());
     }
 }

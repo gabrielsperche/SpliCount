@@ -2,18 +2,21 @@ package entities;
 
 public class Departamento {
     private String nome;
-    private Double orcamento;
+    private String orcamento;
 
-    public Departamento(String nome, Double orcamento) {
+    public Departamento(String nome, String orcamento) {
         this.nome = nome;
         this.orcamento = orcamento;
+    }
+
+    public Departamento() {
     }
 
     public String getNome() {
         return nome;
     }
 
-    public Double getOrcamento() {
+    public String getOrcamento() {
         return orcamento;
     }
 }

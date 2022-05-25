@@ -1,6 +1,7 @@
 package splitec.splicountviewapp.splicount;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -23,19 +24,19 @@ public class HelloApplication extends Application {
     public void start(Stage primaryStage) throws IOException {
         stage = primaryStage;
 
-        Parent fxmlMain= FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        Parent fxmlMain = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
         mainScene = new Scene(fxmlMain, 1200, 720);
 
-        Parent fxmlCadastroUsuario= FXMLLoader.load(getClass().getResource("CadUsuario.fxml"));
+        Parent fxmlCadastroUsuario = FXMLLoader.load(getClass().getResource("CadUsuario.fxml"));
         cadastroUsuarioScene = new Scene(fxmlCadastroUsuario, 1200, 720);
 
-        Parent fxmlEmpresa= FXMLLoader.load(getClass().getResource("InfoEmpresa.fxml"));
+        Parent fxmlEmpresa = FXMLLoader.load(getClass().getResource("InfoEmpresa.fxml"));
         empresaScene = new Scene(fxmlEmpresa, 1200, 720);
 
-        Parent fxmlDashboard= FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
+        Parent fxmlDashboard = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
         dashboardScene = new Scene(fxmlDashboard, 1200, 720);
 
-        Parent fxmlDepartamento= FXMLLoader.load(getClass().getResource("CadDepartamento.fxml"));
+        Parent fxmlDepartamento = FXMLLoader.load(getClass().getResource("CadDepartamento.fxml"));
         departamentoScene = new Scene(fxmlDepartamento, 1200, 720);
 
         primaryStage.setTitle("Splicount");
@@ -44,8 +45,8 @@ public class HelloApplication extends Application {
         primaryStage.show();
     }
 
-    public static void changeScreen(String scr){
-        switch (scr){
+    public static void changeScreen(String scr) {
+        switch (scr) {
             case "main":
                 stage.setScene(mainScene);
                 break;
@@ -53,14 +54,40 @@ public class HelloApplication extends Application {
                 stage.setScene(cadastroUsuarioScene);
                 break;
             case "empresa":
-                stage.setScene(empresaScene);
+                stage.setScene(new Scene(empresaScreen(), 1200, 720));
                 break;
             case "dashboard":
                 stage.setScene(dashboardScene);
                 break;
             case "departamento":
-                stage.setScene(departamentoScene);
+                stage.setScene(new Scene(departsScreen(), 1200, 720));
                 break;
+        }
+    }
+
+    public static Parent empresaScreen() {
+        try {
+            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("InfoEmpresa.fxml"));
+            Parent root = loader.load();
+            InfoEmpresaController infoEmpresaController = loader.getController();
+            infoEmpresaController.setEmpresa();
+            return root;
+
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    public static Parent departsScreen() {
+        try {
+            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("CadDepartamento.fxml"));
+            Parent root = loader.load();
+            CadDepartamentoController cadDepartamentoController = loader.getController();
+            cadDepartamentoController.setDepartamento();
+            return root;
+
+        } catch (Exception e) {
+            return null;
         }
     }
 

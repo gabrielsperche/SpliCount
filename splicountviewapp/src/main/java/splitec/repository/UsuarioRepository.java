@@ -1,10 +1,9 @@
 package splitec.repository;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import entities.MessageResponse;
 import splitec.Constants;
 import splitec.client.Client;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,7 +17,7 @@ public class UsuarioRepository extends Client implements Constants {
         body.put(SENHA, senha);
         try {
             return post(AUTH, new ObjectMapper().writeValueAsString(body));
-        } catch (JsonProcessingException e) {
+        } catch (Exception e) {
             return new MessageResponse("Objeto inválido", false);
         }
     }
@@ -32,7 +31,7 @@ public class UsuarioRepository extends Client implements Constants {
 
         try {
             return post(USER_UPSERT, new ObjectMapper().writeValueAsString(body));
-        } catch (JsonProcessingException e) {
+        } catch (Exception e) {
             return new MessageResponse("Objeto inválido", false);
         }
     }

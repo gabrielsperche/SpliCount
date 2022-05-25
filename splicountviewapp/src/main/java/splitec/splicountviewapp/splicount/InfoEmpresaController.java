@@ -4,18 +4,12 @@ import entities.Departamento;
 import entities.Empresa;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import splitec.service.EmpresaService;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
-public class InfoEmpresaController implements Initializable {
-
+public class InfoEmpresaController {
     @FXML
     private Text txtNomeEmpresa;
     @FXML
@@ -29,6 +23,16 @@ public class InfoEmpresaController implements Initializable {
     @FXML
     private Button btnDashScreen;
 
+    public void setEmpresa() {
+        Empresa empresa = EmpresaService.getInfoEmpresa();
+
+        txtNomeEmpresa.setText(empresa.getEmpresa());
+        txtPatrimonio.setText(empresa.getPatrimonio());
+
+        for (Departamento dept: empresa.getDepartamentos()) {
+            listDeparts.getItems().add(dept.getNome());
+        }
+    }
 
     @FXML
     protected void onCadastrarClick(ActionEvent event) {
@@ -73,18 +77,6 @@ public class InfoEmpresaController implements Initializable {
             HelloApplication.changeScreen("main");
         } catch (Exception e) {
 
-        }
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        Empresa empresa = EmpresaService.infosEmpresa("kljdflkjdsl");
-        
-        txtNomeEmpresa.setText(empresa.getNome());
-        txtPatrimonio.setText(empresa.getPatrimonio());
-
-        for (Departamento dept: empresa.getDepartamentos()) {
-            listDeparts.getItems().add(dept.getNome());
         }
     }
 }

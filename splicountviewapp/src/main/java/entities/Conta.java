@@ -11,7 +11,7 @@ public class Conta {
 
     }
 
-    public String getIdEmpresa() {
+    public static String getIdEmpresa() {
         return idEmpresa;
     }
 
