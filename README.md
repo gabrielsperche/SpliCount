@@ -2,11 +2,11 @@
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
-![GitHub repo size](https://img.shields.io/github/gabrielsperche/SpliCount/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/gabrielsperche/SpliCount/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/gabrielsperche/SpliCount/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/gabrielsperche/SpliCount/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/gabrielsperche/SpliCount/README-template?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/SpliCount/README-template?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/SpliCount/README-template?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/SpliCount/README-template?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/SpliCount/README-template?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/SpliCount/README-template?style=for-the-badge)
 
 ![image](https://user-images.githubusercontent.com/57714182/170361279-62584f86-4821-49cb-acf4-5dfd608d5587.png)
 
