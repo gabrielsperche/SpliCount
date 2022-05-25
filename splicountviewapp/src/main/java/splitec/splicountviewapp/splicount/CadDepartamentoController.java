@@ -61,7 +61,7 @@ public class CadDepartamentoController implements Initializable {
     @FXML
     protected void onEmpresaScreenClick(ActionEvent event) {
         try {
-            HelloApplication.changeScreen("cadastrarEmpresa");
+            HelloApplication.changeScreen("empresa");
         } catch (Exception e) {
 
         }
@@ -80,6 +80,15 @@ public class CadDepartamentoController implements Initializable {
     protected void onUserScreenClick(ActionEvent event) {
         try {
             HelloApplication.changeScreen("cadastrarUsuario");
+        } catch (Exception e) {
+
+        }
+    }
+
+    @FXML
+    protected void logoutApp(ActionEvent event) {
+        try {
+            HelloApplication.changeScreen("main");
         } catch (Exception e) {
 
         }

@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="splitec.splicountviewapp.splicount.CadDepartamentoController">
+<Group xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="splitec.splicountviewapp.splicount.CadDepartamentoController">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d0d0d0" height="57.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#730086" height="706.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="147.0" />
-        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="57.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="56.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@Images/Add moderator.png" />
             </image>
@@ -30,7 +37,7 @@
                 <Image url="@Images/Logout.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="48.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="48.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@Images/Rectangle 13.png" />
             </image>
@@ -75,6 +82,9 @@
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Label layoutX="220.0" layoutY="328.0" text="Lista de departamentos">
          <font>
@@ -86,7 +96,30 @@
             <TableColumn fx:id="nameColumn" prefWidth="336.0" text="Nome" />
             <TableColumn fx:id="orcamentoColumn" minWidth="0.0" prefWidth="524.0" text="Orçamento" />
          </columns></TableView>
-      <Button fx:id="btnDashScreen" layoutX="45.0" layoutY="148.0" mnemonicParsing="false" onAction="#onDashScreenClick" opacity="0.0" prefHeight="50.0" prefWidth="55.0" />
-      <Button fx:id="btnEmpresaScreen" layoutX="43.0" layoutY="232.0" mnemonicParsing="false" onAction="#onEmpresaScreenClick" opacity="0.0" prefHeight="51.0" prefWidth="58.0" text="Button" />
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="56.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Post%20add%20roxo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnDashScreen" layoutX="43.0" layoutY="148.0" mnemonicParsing="false" onAction="#onDashScreenClick" opacity="0.0" prefHeight="50.0" prefWidth="55.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnEmpresaScreen" layoutX="43.0" layoutY="232.0" mnemonicParsing="false" onAction="#onEmpresaScreenClick" opacity="0.0" prefHeight="51.0" prefWidth="58.0" text="Button">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="46.0" layoutY="623.0" mnemonicParsing="false" onAction="#logoutApp" opacity="0.0" prefHeight="55.0" prefWidth="46.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnCadastrar1" layoutX="1089.0" layoutY="623.0" mnemonicParsing="false" onAction="#onCadastrarClick" prefHeight="37.0" prefWidth="127.0" text="Remover" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
     </children>
 </Group>
