@@ -2,13 +2,13 @@
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/SpliCount/README-template?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/SpliCount/README-template?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/SpliCount/README-template?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/SpliCount/README-template?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/SpliCount/README-template?style=for-the-badge)
 
-<img src="imag.png" alt="imagem">
+![image](https://user-images.githubusercontent.com/57714182/170361279-62584f86-4821-49cb-acf4-5dfd608d5587.png)
 
 > Sua API para controle financeiro empresarial
 
@@ -74,38 +74,45 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <img src="https://user-images.githubusercontent.com/57714182/170365203-6df7cc00-e852-45bc-a11e-677f64f6feb6.png" width="100px;"/><br>
         <sub>
-          <b>Iuri Silva</b>
+          <b>Alessandro Toledo</b>
         </sub>
       </a>
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://s2.glbimg.com/FUcw2usZfSTL6yCCGj3L3v3SpJ8=/smart/e.glbimg.com/og/ed/f/original/2019/04/25/zuckerberg_podcast.jpg" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <img src="https://user-images.githubusercontent.com/57714182/170363990-fbe5fdf2-12ee-418b-b282-58c6f369a95d.png" width="100px;" /><br>
         <sub>
-          <b>Mark Zuckerberg</b>
+          <b>Gabriel Tadeu</b>
         </sub>
       </a>
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://miro.medium.com/max/360/0*1SkS3mSorArvY9kS.jpg" width="100px;" alt="Foto do Steve Jobs"/><br>
+        <img src="https://user-images.githubusercontent.com/57714182/170362800-d2286bd1-5c14-4705-8277-c377a01e20f6.png" width="100px;" /><br>
         <sub>
-          <b>Steve Jobs</b>
+          <b>Guilherme Santiago</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://user-images.githubusercontent.com/57714182/170364334-ab6376be-adfe-44f2-a6e9-92c2d386559f.png" height="100px;" width="100px;" /><br>
+        <sub>
+          <b>Lucas Leal</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://user-images.githubusercontent.com/57714182/170364524-773fc4c1-7e81-4aef-9663-1f043208245a.png" width="100px;" /><br>
+        <sub>
+          <b>Murilo Moura</b>
         </sub>
       </a>
     </td>
   </tr>
 </table>
-
-
-## 😄 Seja um dos contribuidores<br>
-
-Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.
-
-## 📝 Licença
-
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 
 [⬆ Voltar ao topo](#nome-do-projeto)<br>
