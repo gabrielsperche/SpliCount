@@ -80,8 +80,6 @@ public class DepartamentoController {
 
         if (idEmpresa == null)
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
-        if (empresaService.exiteAlgum(idEmpresa))
-            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
 
         List<DepartamentoValor> valores = service.getValorTotalPorEmpresa(idEmpresa);
 
