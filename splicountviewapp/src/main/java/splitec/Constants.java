@@ -9,6 +9,7 @@ public interface Constants {
     String EMP_FIND = "http://localhost:8080/empresa/find/departamentos/";
     String ENTRADA_UPSERT = "http://localhost:8080/notas/entrada";
     String SAIDA_UPSERT = "http://localhost:8080/notas/saida";
+    String NOTAS_DEP = "http://localhost:8080/departamento/getValues/";
 
     //Campos do json de chamada
     String EMAIL = "email";

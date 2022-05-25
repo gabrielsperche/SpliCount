@@ -77,6 +77,6 @@
             <Cursor fx:constant="HAND" />
          </cursor></Button>
       <PieChart fx:id="pieChart" layoutX="217.0" layoutY="173.0" prefHeight="500.0" prefWidth="500.0" />
-      <PieChart fx:id="pieChart1" layoutX="750.0" layoutY="173.0" prefHeight="500.0" prefWidth="500.0" />
+      <PieChart fx:id="pieChartSaidas" layoutX="717.0" layoutY="173.0" prefHeight="500.0" prefWidth="500.0" />
    </children>
 </AnchorPane>

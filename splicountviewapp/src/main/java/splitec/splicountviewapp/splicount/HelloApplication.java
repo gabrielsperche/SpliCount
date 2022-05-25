@@ -57,7 +57,7 @@ public class HelloApplication extends Application {
                 stage.setScene(new Scene(empresaScreen(), 1200, 720));
                 break;
             case "dashboard":
-                stage.setScene(dashboardScene);
+                stage.setScene(new Scene(dashboardScreen(), 1200, 720));
                 break;
             case "departamento":
                 stage.setScene(new Scene(departsScreen(), 1200, 720));
@@ -84,6 +84,19 @@ public class HelloApplication extends Application {
             Parent root = loader.load();
             CadDepartamentoController cadDepartamentoController = loader.getController();
             cadDepartamentoController.setDepartamento();
+            return root;
+
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    public static Parent dashboardScreen() {
+        try {
+            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("Dashboard.fxml"));
+            Parent root = loader.load();
+            DashboardController dashboardController = loader.getController();
+            dashboardController.setDashboard();
             return root;
 
         } catch (Exception e) {

@@ -1,5 +1,8 @@
 package splitec.splicountviewapp.splicount;
 
+import entities.Departamento;
+import entities.Empresa;
+import entities.Nota;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -7,17 +10,40 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
+import splitec.service.DepartamentoService;
+import splitec.service.EmpresaService;
+import splitec.service.NotasService;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
-public class DashboardController implements Initializable {
+public class DashboardController {
+
+    public void setDashboard() {
+        List<Nota> notas = DepartamentoService.getNotas();
+        pieChartData = FXCollections.observableArrayList();
+        pieChartDataSaidas = FXCollections.observableArrayList();
+
+        for (Nota nota: notas) {
+            pieChartData.add(new PieChart.Data(nota.getNome(), nota.getValorEntrada()));
+            pieChartDataSaidas.add(new PieChart.Data(nota.getNome(), nota.getValorSaida()));
+        }
+
+        pieChart.setData(pieChartData);
+        pieChartSaidas.setData(pieChartDataSaidas);
+
+        pieChart.setTitle("Entradas");
+        pieChartSaidas.setTitle("Saídas");
+    }
     @FXML
     private Button btnDepartScreen;
     @FXML
     private PieChart pieChart;
-
     private ObservableList<PieChart.Data> pieChartData;
+    @FXML
+    private PieChart pieChartSaidas;
+    private ObservableList<PieChart.Data> pieChartDataSaidas;
 
     @FXML
     protected void onDepartScreenClick(ActionEvent event) {
@@ -44,18 +70,5 @@ public class DashboardController implements Initializable {
         } catch (Exception e) {
 
         }
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        pieChartData =
-                FXCollections.observableArrayList(
-                        new PieChart.Data("Grapefruit", 13),
-                        new PieChart.Data("Oranges", 25),
-                        new PieChart.Data("Plums", 10),
-                        new PieChart.Data("Pears", 22),
-                        new PieChart.Data("Apples", 30));
-        pieChart.setData(pieChartData);
-        pieChart.setTitle("Imported Fruits");
     }
 }
