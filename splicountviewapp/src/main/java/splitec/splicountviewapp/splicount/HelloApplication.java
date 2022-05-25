@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -14,7 +15,7 @@ public class HelloApplication extends Application {
 
     private static Scene mainScene;
     private static Scene cadastroUsuarioScene;
-    private static Scene cadastroEmpresaScene;
+    private static Scene empresaScene;
     private static Scene dashboardScene;
     private static Scene departamentoScene;
 
@@ -28,8 +29,8 @@ public class HelloApplication extends Application {
         Parent fxmlCadastroUsuario= FXMLLoader.load(getClass().getResource("CadUsuario.fxml"));
         cadastroUsuarioScene = new Scene(fxmlCadastroUsuario, 1200, 720);
 
-        Parent fxmlCadastroEmpresa= FXMLLoader.load(getClass().getResource("CadEmpresa.fxml"));
-        cadastroEmpresaScene = new Scene(fxmlCadastroEmpresa, 1200, 720);
+        Parent fxmlEmpresa= FXMLLoader.load(getClass().getResource("InfoEmpresa.fxml"));
+        empresaScene = new Scene(fxmlEmpresa, 1200, 720);
 
         Parent fxmlDashboard= FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
         dashboardScene = new Scene(fxmlDashboard, 1200, 720);
@@ -37,8 +38,9 @@ public class HelloApplication extends Application {
         Parent fxmlDepartamento= FXMLLoader.load(getClass().getResource("CadDepartamento.fxml"));
         departamentoScene = new Scene(fxmlDepartamento, 1200, 720);
 
-        primaryStage.setTitle("Hello!");
+        primaryStage.setTitle("Splicount");
         primaryStage.setScene(mainScene);
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("Images/icon.png")));
         primaryStage.show();
     }
 
@@ -50,8 +52,8 @@ public class HelloApplication extends Application {
             case "cadastrarUsuario":
                 stage.setScene(cadastroUsuarioScene);
                 break;
-            case "cadastrarEmpresa":
-                stage.setScene(cadastroEmpresaScene);
+            case "empresa":
+                stage.setScene(empresaScene);
                 break;
             case "dashboard":
                 stage.setScene(dashboardScene);
