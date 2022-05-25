@@ -6,7 +6,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import splitec.entities.DTO.NotaEntrada;
+import splitec.entities.DTO.NotaSaida;
 import splitec.entities.DTO.NotasLote;
+import splitec.entities.Departamento;
 import splitec.service.Utils;
 import splitec.entities.DTO.ValorDTO;
 import splitec.entities.Entrada;
@@ -23,10 +26,12 @@ import java.util.Map;
 public class NotasController {
 
     @PostMapping("/entrada")
-    public ResponseEntity<String> criarEntrada(@RequestBody Entrada entrada) {
+    public ResponseEntity<String> criarEntrada(@RequestBody NotaEntrada entrada) {
         DepartamentoService service = new DepartamentoService();
-        ValorDTO data = new ValorDTO(entrada.getValor(), TipoInsercao.ENTRADA, entrada.getDepartamentoId());
-        service.adicionaValor(data);
+        Departamento dep = new Departamento();
+        dep.setNome(entrada.getNomeDepartamento());
+        Departamento depResponse = service.encontraPorModel(dep);
+        ValorDTO data = new ValorDTO(entrada.getValor(), TipoInsercao.ENTRADA, depResponse.getId());
         if (!service.adicionaValor(data)) {
             return new ResponseEntity<>("Erro ao adicionar uma nova entrada", HttpStatus.BAD_REQUEST);
         } else {
@@ -35,10 +40,12 @@ public class NotasController {
     }
 
     @PostMapping("/saida")
-    public ResponseEntity<String> criarSaida(@RequestBody Saida saida) {
+    public ResponseEntity<String> criarSaida(@RequestBody NotaSaida saida) {
         DepartamentoService service = new DepartamentoService();
-        ValorDTO data = new ValorDTO(saida.getValor(), TipoInsercao.SAIDA, saida.getDepartamentoId());
-        service.adicionaValor(data);
+        Departamento dep = new Departamento();
+        dep.setNome(saida.getNomeDepartamento());
+        Departamento depResponse = service.encontraPorModel(dep);
+        ValorDTO data = new ValorDTO(saida.getValor(), TipoInsercao.SAIDA, depResponse.getId());
         if (!service.adicionaValor(data)) {
             return new ResponseEntity<>("Erro ao adicionar uma nova saída", HttpStatus.BAD_REQUEST);
         } else {
