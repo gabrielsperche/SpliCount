@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -15,45 +16,67 @@
     <Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1%22%3E">
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="706.0" layoutX="568.0" stroke="BLACK" strokeType="INSIDE" width="711.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="730086" height="706.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="569.0" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="455.0" layoutX="758.0" layoutY="178.0" stroke="#d1d5da" strokeType="INSIDE" width="362.0" />
-        <Text fill="#222831" layoutX="758.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastre-se" textAlignment="CENTER" wrappingWidth="362.201171875">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="455.0" layoutX="758.0" layoutY="128.0" stroke="#d1d5da" strokeType="INSIDE" width="362.0" />
+        <Text fill="#222831" layoutX="758.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastre-se" textAlignment="CENTER" wrappingWidth="362.201171875">
             <font>
                 <Font name="Arial" size="20.0" />
             </font>
         </Text>
-        <Text layoutX="810.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preencha seus dados abaixo">
+        <Text layoutX="810.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preencha seus dados abaixo">
             <font>
                 <Font name="Arial" size="20.0" />
             </font>
         </Text>
-        <Label layoutX="783.0" layoutY="295.0" text="Nome">
+        <Label layoutX="783.0" layoutY="245.0" text="Nome">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label layoutX="783.0" layoutY="433.0" text="Senha">
+        <Label layoutX="783.0" layoutY="444.0" text="Senha">
             <font>
                 <Font name="Arial" size="16.0" />
             </font>
         </Label>
-        <TextField fx:id="txtNome" layoutX="783.0" layoutY="320.0" onAction="#onCadastrarClick" prefHeight="30.0" prefWidth="305.0" />
-        <TextField fx:id="txtSenha" accessibleRole="PASSWORD_FIELD" layoutX="783.0" layoutY="453.0" onAction="#onCadastrarClick" prefHeight="30.0" prefWidth="305.0" />
-        <Button fx:id="btnCadastrar" layoutX="783.0" layoutY="514.0" mnemonicParsing="false" onAction="#onCadastrarClick" prefHeight="37.0" prefWidth="308.0" style="-fx-background-color: #730086;" text="Cadastrar" textFill="#f1f8ff">
+        <TextField fx:id="txtNome" layoutX="783.0" layoutY="270.0" onAction="#onCadastrarClick" prefHeight="30.0" prefWidth="305.0" />
+        <TextField fx:id="txtSenha" accessibleRole="PASSWORD_FIELD" layoutX="783.0" layoutY="464.0" onAction="#onCadastrarClick" prefHeight="30.0" prefWidth="305.0" />
+        <Button fx:id="btnCadastrar" layoutX="783.0" layoutY="508.0" mnemonicParsing="false" onAction="#onCadastrarClick" prefHeight="37.0" prefWidth="308.0" style="-fx-background-color: #730086;" text="Cadastrar" textFill="#f1f8ff">
             <font>
                 <Font name="Arial Bold" size="16.0" />
             </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
         </Button>
-        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="1058.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="1058.0" layoutY="469.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@Images/Remove red eye.png" />
             </image>
         </ImageView>
-      <Label layoutX="783.0" layoutY="366.0" text="E-mail">
+      <Label layoutX="783.0" layoutY="316.0" text="E-mail">
          <font>
             <Font name="Arial" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtEmail" layoutX="783.0" layoutY="386.0" onAction="#onCadastrarClick" prefHeight="30.0" prefWidth="305.0" />
+      <TextField fx:id="txtEmail" layoutX="783.0" layoutY="336.0" onAction="#onCadastrarClick" prefHeight="30.0" prefWidth="305.0" />
+      <Label layoutX="784.0" layoutY="381.0" text="Empresa">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmpresa" layoutX="784.0" layoutY="401.0" onAction="#onCadastrarClick" prefHeight="30.0" prefWidth="305.0" />
+      <Text fx:id="txtAlert" fill="#ae0c0c" layoutX="768.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entre com sua conta" textAlignment="CENTER" visible="false" wrappingWidth="352.7421875">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnCadastrar1" layoutX="936.0" layoutY="592.0" mnemonicParsing="false" onAction="#backToLogin" prefHeight="20.0" prefWidth="187.0" style="-fx-background-color: #ffffff;" text="Já possuo cadastro" textFill="#730086">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
     </Group>
     <Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1%22%3E">
         <Group xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" />

@@ -11,6 +11,7 @@ module splitec.splicountviewapp.splicount {
     requires eu.hansolo.tilesfx;
     requires java.net.http;
     requires com.fasterxml.jackson.databind;
+    requires org.mongodb.bson;
 
     opens splitec.splicountviewapp.splicount to javafx.fxml;
     opens entities to javafx.base;

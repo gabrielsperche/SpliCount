@@ -1,19 +1,27 @@
 package entities;
 
+import java.util.List;
+
 public class Empresa {
     private String nome;
-    private String cnpj;
+    private String patrimonio;
+    private List<Departamento> departamentos;
 
-    public Empresa(String nome, String cnpj) {
+    public Empresa(String nome, String patrimonio, List<Departamento> departamentos) {
         this.nome = nome;
-        this.cnpj = cnpj;
+        this.patrimonio = patrimonio;
+        this.departamentos = departamentos;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public String getCnpj() {
-        return cnpj;
+    public String getPatrimonio() {
+        return patrimonio;
+    }
+
+    public List<Departamento> getDepartamentos() {
+        return departamentos;
     }
 }
