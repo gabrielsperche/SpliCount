@@ -78,5 +78,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   </tr>
 </table>
 
+![Snake animation](https://github.com/GuiCSantiago/GuiCSantiago/blob/output/github-contribution-grid-snake.svg)
 
-[⬆ Voltar ao topo](https://github.com/gabrielsperche/SpliCount/edit/main/README.md)<br>
+[⬆ Voltar ao topo](https://github.com/gabrielsperche/SpliCount/blob/main/README.md)<br>
