@@ -82,11 +82,9 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
     <td align="center">
       <a href="#">
-        ![image](https://user-images.githubusercontent.com/57714182/170362113-86905ccb-bdaa-4f61-ba1b-648253a28bcd.png)
-
-        <img src="https://user-images.githubusercontent.com/57714182/170362113-86905ccb-bdaa-4f61-ba1b-648253a28bcd.png" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <img src="https://user-images.githubusercontent.com/57714182/170362113-86905ccb-bdaa-4f61-ba1b-648253a28bcd.png" width="100px;" /><br>
         <sub>
-          <b>Mark Zuckerberg</b>
+          <b>Gabriel Tadeu</b>
         </sub>
       </a>
     </td>
