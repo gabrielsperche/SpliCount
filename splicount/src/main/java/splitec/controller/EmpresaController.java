@@ -1,5 +1,7 @@
 package splitec.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.bson.types.ObjectId;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,7 +11,7 @@ import splitec.entities.Empresa;
 import splitec.service.DepartamentoService;
 import splitec.service.EmpresaService;
 
-import java.util.List;
+import java.util.*;
 
 @RestController
 @RequestMapping("/empresa")
@@ -64,6 +66,30 @@ public class EmpresaController {
         service.deletar(id);
 
         return new ResponseEntity<>("Deletado", HttpStatus.OK);
+    }
+
+    @GetMapping("/find/departamentos/{id}")
+    public ResponseEntity<String> encontrarDepartamentosEmpresa(@PathVariable ObjectId id) throws JsonProcessingException {
+
+        EmpresaService service = new EmpresaService();
+        Empresa empresa = service.encontraPorId(id);
+
+        List<ObjectId> ids = empresa.getDepartamentosIds();
+        List<Map> departamentos = new ArrayList<>();
+        Map empresaMap = new HashMap<>();
+        empresaMap.put("empresa", empresa.getNome());
+        empresaMap.put("patrimonio", String.valueOf(empresa.getPatrimonio().getValorTotal()));
+        DepartamentoService depService = new DepartamentoService();
+        for (int x = 0; x < ids.size(); x++) {
+            Departamento serviceResponse = depService.encontraPorId(ids.get(x));
+            Map departamento = new HashMap<>();
+            departamento.put("nome", serviceResponse.getNome());
+            departamento.put("orcamento", String.valueOf(serviceResponse.getOrcamento()));
+            departamentos.add(x, departamento);
+        }
+        empresaMap.put("departamentos", departamentos);
+
+        return new ResponseEntity<>(new ObjectMapper().writeValueAsString(empresaMap), HttpStatus.OK);
     }
 
 }
