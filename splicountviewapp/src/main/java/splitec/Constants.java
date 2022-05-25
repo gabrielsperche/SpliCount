@@ -6,6 +6,9 @@ public interface Constants {
     String USER_UPSERT = "http://localhost:8080/user/upsert";
     String DEP_UPSERT = "http://localhost:8080/departamento/upsert";
     String EMP_UPSERT = "http://localhost:8080/empresa/upsert";
+    String EMP_FIND = "http://localhost:8080/empresa/find/departamentos/";
+    String ENTRADA_UPSERT = "http://localhost:8080/notas/entrada";
+    String SAIDA_UPSERT = "http://localhost:8080/notas/saida";
 
     //Campos do json de chamada
     String EMAIL = "email";

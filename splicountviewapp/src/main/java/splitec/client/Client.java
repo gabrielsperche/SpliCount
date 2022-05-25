@@ -10,7 +10,7 @@ import java.net.http.HttpResponse;
 
 public class Client implements Constants {
 
-    public MessageResponse get(String url) {
+    public static MessageResponse get(String url) {
         try {
 
             HttpRequest httpClient = HttpRequest.newBuilder()

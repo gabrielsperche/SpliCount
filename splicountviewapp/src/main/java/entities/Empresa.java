@@ -3,18 +3,15 @@ package entities;
 import java.util.List;
 
 public class Empresa {
-    private String nome;
+    private String empresa;
     private String patrimonio;
     private List<Departamento> departamentos;
 
-    public Empresa(String nome, String patrimonio, List<Departamento> departamentos) {
-        this.nome = nome;
-        this.patrimonio = patrimonio;
-        this.departamentos = departamentos;
+    public Empresa() {
     }
 
-    public String getNome() {
-        return nome;
+    public String getEmpresa() {
+        return empresa;
     }
 
     public String getPatrimonio() {
