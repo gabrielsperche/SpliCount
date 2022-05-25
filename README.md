@@ -2,7 +2,7 @@
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
-https://img.shields.io/github/languages/code-size/gabrielsperche/SpliCount
+![GitHub Get Size](https://img.shields.io/github/languages/code-size/gabrielsperche/SpliCount)
 ![GitHub language count](https://img.shields.io/github/languages/count/gabrielsperche/SpliCount)
 ![GitHub forks](https://img.shields.io/github/forks/gabrielsperche/SpliCount)
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/gabrielsperche/SpliCount)
