@@ -1,24 +1,24 @@
 package splitec.splicountviewapp.splicount;
 
+import entities.Conta;
 import entities.Departamento;
+import entities.Empresa;
 import entities.MessageResponse;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import splitec.service.DepartamentoService;
+import splitec.service.EmpresaService;
+import splitec.service.NotasService;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class CadDepartamentoController implements Initializable {
-    @FXML
-    private Stage stage = new Stage();
     @FXML
     private TextField txtNomeDepart;
     @FXML
@@ -31,11 +31,26 @@ public class CadDepartamentoController implements Initializable {
     private Button btnDashScreen;
 
     @FXML
-    private TableColumn<Departamento, String> nameColumn;
+    private ListView listDeparts;
+
     @FXML
-    private TableColumn<Departamento, Double> orcamentoColumn;
+    private ComboBox comboBox;
+
     @FXML
-    private TableView<Departamento> listDepartamentos;
+    private TextField txtNomeDepEntradaSaida;
+
+    @FXML
+    private TextField txtValorEntradaSaida;
+    @FXML
+    private Text txtAlert;
+
+    public void setDepartamento() {
+        Empresa empresa = EmpresaService.getInfoEmpresa();
+
+        for (Departamento dept : empresa.getDepartamentos()) {
+            listDeparts.getItems().add(dept.getNome());
+        }
+    }
 
     @FXML
     protected void onCadastrarClick(ActionEvent event) {
@@ -45,17 +60,29 @@ public class CadDepartamentoController implements Initializable {
 
             MessageResponse response = DepartamentoService.createDepartamento(nome, orcamento);
             if (response.isSucess()) {
-                listDepartamentos.getItems().add(new Departamento(nome, orcamento));
+                listDeparts.getItems().add(nome);
             }
         } catch (Exception e) {
             throw e;
         }
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        nameColumn.setCellValueFactory(new PropertyValueFactory<>("nome"));
-        orcamentoColumn.setCellValueFactory(new PropertyValueFactory<>("orcamento"));
+    @FXML
+    protected void onRegistrarEntradaSaidaClick(ActionEvent event) {
+        try {
+            String nome = listDeparts.getSelectionModel().getSelectedItem().toString();
+            String tipo = comboBox.getSelectionModel().getSelectedItem().toString();
+            Double valor = Double.parseDouble(txtValorEntradaSaida.getText());
+
+            MessageResponse response = NotasService.createNota(nome, tipo, valor);
+            if (response.isSucess()) {
+                txtAlert.setText("Nota cadastrada");
+                txtAlert.setVisible(true);
+            }
+
+        } catch (Exception e) {
+            throw e;
+        }
     }
 
     @FXML
@@ -92,5 +119,13 @@ public class CadDepartamentoController implements Initializable {
         } catch (Exception e) {
 
         }
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        comboBox.getItems().addAll(
+                "Entrada",
+                "Saída"
+        );
     }
 }
