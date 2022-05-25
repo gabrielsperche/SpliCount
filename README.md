@@ -78,4 +78,4 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   </tr>
 </table>
 
-[⬆ Voltar ao topo](#nome-do-projeto)<br>
+[⬆ Voltar ao topo](https://github.com/gabrielsperche/SpliCount/blob/main/README.md)<br>
