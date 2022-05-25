@@ -98,7 +98,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://user-images.githubusercontent.com/57714182/170363010-016b84fa-2dce-4eb0-9e57-c9ef7089a423.png" height="100px;" width="100px;" /><br>
+        <img src="https://user-images.githubusercontent.com/57714182/170364334-ab6376be-adfe-44f2-a6e9-92c2d386559f.png" height="100px;" width="100px;" /><br>
         <sub>
           <b>Lucas Leal</b>
         </sub>
