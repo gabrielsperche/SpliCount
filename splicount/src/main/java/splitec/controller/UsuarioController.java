@@ -57,9 +57,9 @@ public class UsuarioController {
         service.criarOuAtualizarUsuario(model);
 
         Empresa userCompany = new Empresa();
-        EmpresaService companyService = new EmpresaService();
+        EmpresaController controller = new EmpresaController();
         userCompany.setNome(model.getEmpresa());
-        companyService.criarOuAtualizarEmpresa(userCompany);
+        controller.criarOuAtualizarEmpresa(userCompany);
 
         if (model.getId() == null)
             return new ResponseEntity<>("Erro ao salvar", HttpStatus.BAD_REQUEST);
