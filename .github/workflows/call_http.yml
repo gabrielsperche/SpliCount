@@ -1,0 +1,21 @@
+name: Call HTTP Job
+run-name: This run after new tag created and call http  🚀
+on:
+  workflow_run:
+    workflows: ["Tag Job"]
+    types: [completed]
+jobs:
+  on-success:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Deploy Stage
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://httpbin.org/headers'
+          method: 'GET'
+          customHeaders: '{"Testing": "Gabriel"}'
+      - name: Response
+        run: |
+          echo ${{ steps.myRequest.outputs.response }}
+          echo ${{ steps.myRequest.outputs.headers }}
