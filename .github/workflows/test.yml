@@ -1,7 +1,7 @@
-name: GitHub Tag
-run-name: ${{ github.actor }} is testing  🚀
+name: Tag Job
+run-name: This run when a new tag is created  🚀
 on:
-  push:
+  create:
     tags:
       - '*'
 jobs:
