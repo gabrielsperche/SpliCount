@@ -10,5 +10,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set env
-        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
       - run: echo "The new created tag is ${{ env.RELEASE_VERSION }} "
